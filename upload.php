@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $secureCode = bin2hex(random_bytes(8));
 
         // Move the uploaded file to a secure location
-        $uploadDir = "E:/Test Website/uploadss/";
+        $uploadDir = "uploadss/";
         $uploadPath = $uploadDir . $secureCode . "." . $fileExtension;
 
         move_uploaded_file($file["tmp_name"], $uploadPath);
